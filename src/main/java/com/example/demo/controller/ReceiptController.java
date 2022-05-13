@@ -25,7 +25,7 @@ public class ReceiptController {
         this.receiptService = receiptService;
     }
 
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(path = "api/v1/receipt/new")
     @PostMapping
     public ResponseEntity<ApiResponse> createReceipt(@RequestBody Receipt receipt) {
@@ -36,7 +36,7 @@ public class ReceiptController {
             return new ResponseEntity<>(new ApiResponse(false, e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping(path = "api/v1/receipt")
     @GetMapping
     public ResponseEntity getReceipt(@RequestBody Map<String, Object> request){
