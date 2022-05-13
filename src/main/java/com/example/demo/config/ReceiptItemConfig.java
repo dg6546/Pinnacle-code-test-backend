@@ -65,6 +65,25 @@ public class ReceiptItemConfig {
             receiptItemRepository.saveAll(listOfReceiptItem1);
             Receipt receipt1 = new Receipt(ca, listOfReceiptItem1);
             receiptRepository.save(receipt1);
+
+            //receipt2
+            List<ReceiptItem> listOfReceiptItem2 = new ArrayList<>();
+            listOfReceiptItem2.add(new ReceiptItem(book, 1));
+            listOfReceiptItem2.add(new ReceiptItem(pencil, 3));
+
+            receiptItemRepository.saveAll(listOfReceiptItem2);
+            Receipt receipt2 = new Receipt(ny, listOfReceiptItem2);
+            receiptRepository.save(receipt2);
+
+            //receipt3
+            List<ReceiptItem> listOfReceiptItem3 = new ArrayList<>();
+            listOfReceiptItem3.add(new ReceiptItem(pencil, 2));
+            listOfReceiptItem3.add(new ReceiptItem(shirt, 1));
+
+            receiptItemRepository.saveAll(listOfReceiptItem3);
+            Receipt receipt3 = new Receipt(ny, listOfReceiptItem3);
+            receiptRepository.save(receipt3);
+
         };
     }
 
